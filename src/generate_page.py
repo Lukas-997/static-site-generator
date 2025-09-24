@@ -40,6 +40,9 @@ def generate_pages_recursive(dir_path_content, template_path, dest_dir_path, bas
     pathlib.Path(dest_dir_path).mkdir(parents=True, exist_ok=True)
 
     for entry in os.listdir(dir_path_content):
+        if entry.endswith(":Zone.Identifier"):
+            continue  # skip Windows metadata files
+
         content_path = os.path.join(dir_path_content, entry)
         dest_path = os.path.join(dest_dir_path, entry)
 
