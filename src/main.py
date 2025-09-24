@@ -2,7 +2,7 @@ import os
 import shutil
 import sys
 from copy_static import copy_static
-from generate_page import generate_pages_recursive  # ✅ import here
+from generate_page import generate_pages_recursive
 
 def main():
     # basepath from CLI arg or default to "/"
